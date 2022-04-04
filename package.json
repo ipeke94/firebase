@@ -1,7 +1,7 @@
 {
   "name": "test-firebase",
   "version": "0.1.0",
-  "homepage": "https://ipeke94.github.io/firebaseTest/",
+  "homepage": "https://ipeke94.github.io/firebase/",
   "private": true,
   "dependencies": {
     "firebase": "^9.6.10",
