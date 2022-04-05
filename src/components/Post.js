@@ -9,13 +9,17 @@ const Post = ({ title, content, user, createdAt, stars, comments, id }) => {
   return (
     <article className="post">
       <div className="post-content">
-        <h3>{title}</h3>
-        <div>{content}</div>
+        <span>
+          item: <b>{title.toUpperCase()} </b>
+        </span>
+        <span>
+          / count: <b>{content}</b>
+        </span>
       </div>
       <div className="post-meta">
         <div>
           <p>
-            <span role="img" aria-label="star">
+            <span onClick={star} role="img" aria-label="star">
               ⭐️
             </span>
             {stars}
@@ -26,13 +30,13 @@ const Post = ({ title, content, user, createdAt, stars, comments, id }) => {
             </span>
             {comments}
           </p>
-          <p>Posted by {user.displayName}</p>
-          <p>{moment(createdAt.toDate()).calendar()}</p>
+          <p className="p-username">{user.displayName}🤎💚</p>
+          <p className="p-date">{moment(createdAt && createdAt.toDate()).calendar()}</p>
         </div>
         <div>
-          <button className="star" onClick={star}>
+          {/* <button className="star" onClick={star}>
             Star
-          </button>
+          </button> */}
           <button className="delete" onClick={remove}>
             Delete
           </button>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Posts from "./Posts";
 import { firestore } from "../firebase";
 import { collectionDocsIDS } from "../utilities";
+import AddPost from "./AddPost";
 
 class Application extends Component {
   state = {
@@ -30,7 +31,8 @@ class Application extends Component {
     const { posts } = this.state;
     return (
       <main className="application">
-        <h1 className="app-title">Say Helo!</h1>
+        <h1 className="app-title">Shopping List (Guner Fam)</h1>
+        <AddPost />
         <Posts posts={posts}></Posts>
       </main>
     );

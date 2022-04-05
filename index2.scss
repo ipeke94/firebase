@@ -7,22 +7,12 @@
 
 
 
-// $input-color: #cd7d12;
-// $button-color: #E4E9FE;
-// $info-color: #cd7d12;
-// $comment-highlight-color: #d29a46;
-// $danger-color: #e52514;
-// $title-color: #ae3404;
-// $user-color: #7c4b37;
-// $delete-btn-color: #371407;
-
-
-$input-color: #84b45e;
+$input-color: #cd7d12;
 $button-color: #E4E9FE;
 $info-color: #cd7d12;
-$comment-highlight-color: #ca861f;
-$danger-color: #e69010;
-$title-color: #d29a46;
+$comment-highlight-color: #d29a46;
+$danger-color: #e52514;
+$title-color: #ae3404;
 $user-color: #7c4b37;
 $delete-btn-color: #371407;
 
@@ -30,6 +20,7 @@ $delete-btn-color: #371407;
 @mixin button($color) {
   background-color: $color;
   border: 1px solid darken($color, 10);
+  max-width: 480px;
   &:hover {
     background-color: lighten($color, 10);
   }
@@ -58,7 +49,7 @@ button {
   display: block;
   width: 100%;
   &:not(:last-child) {
-    // margin-bottom: 5px;
+    margin-bottom: 5px;
   }
   &:focus {
     outline: none;
@@ -80,8 +71,7 @@ input[type='text']::placeholder {
 
 .create {
   color: $delete-btn-color;
-  //text-shadow: 0 0 3px rgb(105, 73, 25);
-  background-color: #19af39 !important;
+  // background-color: #19af39 !important;
 }
 
 button,
@@ -112,12 +102,6 @@ input[type="file"] {
 
 .app-title {
     color: $title-color;
-    font-style: italic;
-    
-}
-
-.post-cards {
-
 }
 
 %authentication {
@@ -172,30 +156,11 @@ input[type="file"] {
 
 .add-post,
 .AddComment {
-  max-width: 720px;
-  min-width: 480px;
+  max-width: 480px;
   margin-bottom: 1em;
-  border: 1px solid $input-color;
 }
 
 
-.post-max-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.posts-container { 
-  // display:flex;
-  
-}
-
-.list {
-  display:flex;
-  flex-direction: column;
-  font-style: italic;
-  margin-left:20px;
-  max-width: 180px;
-}
 
 .AddComment {
   display: flex;
@@ -214,8 +179,7 @@ input[type="file"] {
 .post {
   border: 1px solid $input-color;
   margin-bottom: 1em;
-  max-width: 720px;
-  min-width: 480px;
+  max-width: 480px;
 }
 
 .post-content {
@@ -229,15 +193,8 @@ input[type="file"] {
   padding: 0.5em;
   // background: rgb(238,174,202);
   // background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  // background: rgb(255,194,102);
-  // background: radial-gradient(circle, rgba(255,194,102,1) 0%, rgba(250,121,70,1) 100%);
-  // background: rgb(25,175,57);
-  // background: radial-gradient(circle, rgba(25,175,57,1) 0%, rgba(236,228,128,1) 94%);
-  // background: rgb(110,243,36);
-  // background: radial-gradient(circle, rgba(110,243,36,1) 0%, rgba(244,182,0,1) 99%);
-  
-  background: rgb(128,209,82);
-  background: radial-gradient(circle, rgba(128,209,82,1) 0%, rgba(249,227,164,1) 99%);
+  background: rgb(255,194,102);
+  background: radial-gradient(circle, rgba(255,194,102,1) 0%, rgba(250,121,70,1) 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -258,8 +215,7 @@ input[type="file"] {
 }
 
 .p-username, .p-date {
-  font-style: italic;
-  // color: $user-color;
+  color: $user-color;
 }
 
 .Comment {
