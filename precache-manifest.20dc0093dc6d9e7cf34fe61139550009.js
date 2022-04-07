@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "80c8e508921413229f6f",
-    "url": "/firebase/static/css/main.4f582b57.chunk.css"
+    "revision": "73e0240a69dff112d086",
+    "url": "/firebase/static/css/main.507dbbac.chunk.css"
   },
   {
-    "revision": "80c8e508921413229f6f",
+    "revision": "73e0240a69dff112d086",
     "url": "/firebase/static/js/main.fc24ddde.chunk.js"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/firebase/static/js/2.26994401.chunk.js"
   },
   {
-    "revision": "2546a3c6661e9ba5b16c9a8c5f0d4853",
+    "revision": "8f2d15ba712a04ff88dfc1271004f9bf",
     "url": "/firebase/index.html"
   }
 ];
