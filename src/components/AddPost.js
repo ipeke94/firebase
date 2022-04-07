@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { firestore } from "../firebase";
+import mappingItems from "../constants/Map";
+import Autocomplete from "./Autocomplete";
 
 class AddPost extends Component {
   state = { title: "", content: "" };
@@ -7,6 +9,10 @@ class AddPost extends Component {
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
+  };
+
+  handleCallback = (childData) => {
+    this.setState({ title: childData });
   };
 
   handleSubmit = (e) => {
@@ -38,10 +44,10 @@ class AddPost extends Component {
     const { title, content } = this.state;
     return (
       <form onSubmit={this.handleSubmit} className="add-post">
-        <input type="text" name="title" placeholder="Item" value={title} onChange={this.handleChange} />
+        <Autocomplete name="title" parentCallback={this.handleCallback} title={mappingItems.map((e) => e.key)} />
         <input type="text" name="content" placeholder="Count" value={content} onChange={this.handleChange} />
         {/* <input className="create" type="submit" value="Add New Item! 🥕🍄🥩🍓🥨🧅🌽🥬🥦" /> */}
-        <input className="create" type="submit" value="Add New Item! 🥕🥩🥨🥦" />
+        <input className="create" type="submit" value="Add New Item! 🥕🥩🍓🥨🥦" />
       </form>
     );
   }

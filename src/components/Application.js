@@ -32,7 +32,7 @@ class Application extends Component {
     return (
       <main className="application">
         <h1 className="app-title">Shopping List (Guner Fam)</h1>
-        <AddPost />
+        <AddPost posts={posts} />
         <Posts posts={posts}></Posts>
       </main>
     );
