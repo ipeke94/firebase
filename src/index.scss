@@ -147,7 +147,6 @@ input[type="file"] {
 .add-post,
 .AddComment {
   max-width: 720px;
-  min-width: 480px;
   margin-bottom: 0.2em;
   border: 2px solid $title-color;
 }
@@ -217,7 +216,6 @@ input[type="file"] {
   border: 1px solid $title-color;
   margin-bottom: 0.2em;
   max-width: 720px;
-  min-width: 480px;
 }
 
 .post-content {
@@ -276,5 +274,32 @@ input[type="file"] {
   color: darken($info-color, 40);
   &:before {
     content: ' ';
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .post-meta {
+    width: 100%;
+    padding: 0;
+    div {
+      // width: inherit;
+    }
+  }
+
+  span[role=img], .post-content, input[type='text']::placeholder, input[type='submit'].create {
+    font-size: 0.8em;
+  }
+  .post {
+    max-width: 380px;
+  }
+  .p-username, .p-date,  {
+    font-size: 0.6em;
+  }
+  .post-meta 
+  {
+    button.delete {
+      border-radius: 0; 
+    }
   }
 }
